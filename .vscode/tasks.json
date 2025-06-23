@@ -11,6 +11,17 @@
 			"group": "build",
 			"isBackground": false,
 			"problemMatcher": []
+		},
+		{
+			"label": "Run Three-Body Simulation",
+			"type": "shell",
+			"command": "C:/Users/singh/comp/.venv/Scripts/python.exe",
+			"args": [
+				"three_body_simulation.py"
+			],
+			"group": "build",
+			"isBackground": false,
+			"problemMatcher": []
 		}
 	]
 }

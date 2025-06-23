@@ -457,16 +457,15 @@ if __name__ == "__main__":
     print(f"\nEnergy conservation check:")
     print(f"Initial energy: {energies[0]:.6f}, Final energy: {energies[-1]:.6f}")
     print(f"Relative energy drift: {energy_drift:.6f}%")
-    
-    # Create animation with scenario-specific settings
+      # Create animation with scenario-specific settings
     print("Creating animation...")
     if scenario_key == 'near_collision':
-        # Faster animation for the dynamic near-collision scenario
+        # Faster animation for the dynamic near-collision scenario (2x speed)
         # Focus on the interesting part: from start to 8 time units (captures approach and close encounter)
-        fig_anim, anim = system.animate_orbits(interval=10, trail_length=30, time_range=(0, 8))
+        fig_anim, anim = system.animate_orbits(interval=5, trail_length=30, time_range=(0, 8))
     else:
-        # Standard animation speed for other scenarios
-        fig_anim, anim = system.animate_orbits(interval=30, trail_length=50)
+        # Standard animation speed for other scenarios (2x speed)
+        fig_anim, anim = system.animate_orbits(interval=15, trail_length=50)
     plt.show()
     
     print("\nSimulation complete!")
